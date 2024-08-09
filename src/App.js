@@ -5,6 +5,7 @@ import paper from './media/paper.png'
 import { useState } from 'react';
 import Box from './component/Box';
 import './App.css';
+import Score from './component/Score';
 
 //1. 박스 2개 (타이틀, 사진, 결과)
 //2. 가위바위보 버튼 3개
@@ -34,6 +35,7 @@ function App() {
   const [userSelect, setUserSelect] = useState(null); //나의 ui를 바꾸는 state
   const [comSelect, setComSelect] = useState(null); // 컴퓨터의 ui를 바꾸는 state
   const [result, setResult] = useState(""); // 결과 ui를 바꾸는 state
+  const [score, setScore] = useState(0); // 점수 ui를 바꾸는 state
 
   const play =(userChoice)=> {
     // You
@@ -45,7 +47,15 @@ function App() {
     setComSelect(choice[comChoice]);
 
     // 승패 판정 (You 기준 이기면 true)
-    setResult(judgement(choice[userChoice], choice[comChoice]));
+    let j = judgement(choice[userChoice], choice[comChoice])
+    setResult(j);
+
+    if (j == "Win") {
+      setScore(score + 1);
+    }
+    
+
+
   };
 
   const judgement =(user, com)=> {
@@ -79,7 +89,12 @@ function App() {
   return (
     <div>
       <div className='main'>
+        <h1>{result}</h1>
+      </div>
+
+      <div className='container'>
       <Box title='You' item={userSelect} result={result}/>
+      <Score num={score}/>
       <Box title='Computer' item={comSelect} result={result}/>
       </div>
     
@@ -89,9 +104,7 @@ function App() {
         <button id="btn" onClick={() => play("paper")}>보</button>
       </div>
 
-      <div className='main'>
-        <h1>{result}</h1>
-      </div>
+      
 
     </div>
     

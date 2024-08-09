@@ -1,8 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: aliceblue;
+  align-items : center
+}
+
 .box {
   border: 8px solid black;
   width: 500px;
   height: 500px;
-  margin: 5px;
+  margin: 5px 50px;
+  background-color: white;
+  border-radius: 40%;
+}
+
+.score {
+  width: 100px;
+  height: 100px;
+  border: 5px solid black;
+  border-radius: 40%;
+  padding-bottom: 10px;
+  background-color: rgb(179, 232, 246)
 }
 
 .Win {
@@ -21,7 +40,7 @@
 }
 
 .item-img {
-  width: 400px;
+  width: 300px;
   
 }
 
@@ -29,7 +48,10 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  background-color: aliceblue;
 }
+
+
 
 #btn {
   margin: 5px;
