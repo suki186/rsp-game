@@ -1,13 +1,36 @@
 .box {
-  border: 1px solid black;
+  border: 8px solid black;
   width: 500px;
+  height: 500px;
+  margin: 5px;
+}
+
+.Win {
+  border: 8px solid green;
+  color: green;
+}
+
+.Lose {
+  border: 8px solid red;
+  color: red;
+}
+
+.Tie {
+  border: 8px solid black;
+  color: black;
 }
 
 .item-img {
   width: 400px;
+  
 }
 
 .main {
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+
+#btn {
+  margin: 5px;
 }
