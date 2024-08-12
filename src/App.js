@@ -1,11 +1,15 @@
 import scissors from './media/scissors.png'
 import rock from './media/rock.png'
 import paper from './media/paper.png'
+import scissorsBtn from './media/scissorsBtn.png'
+import rockBtn from './media/rockBtn.png'
+import paperBtn from './media/paperBtn.png'
 
 import { useState } from 'react';
 import Box from './component/Box';
 import './App.css';
 import Score from './component/Score';
+
 
 //1. 박스 2개 (타이틀, 사진, 결과)
 //2. 가위바위보 버튼 3개
@@ -54,8 +58,6 @@ function App() {
       setScore(score + 1);
     }
     
-
-
   };
 
   const judgement =(user, com)=> {
@@ -89,7 +91,7 @@ function App() {
   return (
     <div>
       <div className='main'>
-        <h1>{result}</h1>
+        <h1 id='h'>{result}</h1>
       </div>
 
       <div className='container'>
@@ -99,12 +101,10 @@ function App() {
       </div>
     
       <div className='main'>
-        <button id="btn" onClick={() => play("scissors")}>가위</button>
-        <button id="btn" onClick={() => play("rock")}>바위</button>
-        <button id="btn" onClick={() => play("paper")}>보</button>
+        <button className='btn' onClick={() => play("scissors")}><img src={scissorsBtn}/></button>
+        <button className="btn" onClick={() => play("rock")}><img src={rockBtn}/></button>
+        <button className="btn" onClick={() => play("paper")}><img src={paperBtn} /></button>
       </div>
-
-      
 
     </div>
     

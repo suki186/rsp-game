@@ -24,6 +24,11 @@
   background-color: rgb(179, 232, 246)
 }
 
+#h {
+  background-color: rgb(179, 232, 246);
+  border-radius: 30%;
+}
+
 .Win {
   border: 8px solid green;
   color: green;
@@ -51,8 +56,15 @@
   background-color: aliceblue;
 }
 
+.btn {
+  border: none;
+  padding: 10;
+  background: none;
+  cursor: pointer;
+}
 
-
-#btn {
-  margin: 5px;
+.btn img {
+  display: block;
+  width:30px; /* 원하는 크기로 조정 */
+  height: auto;
 }
