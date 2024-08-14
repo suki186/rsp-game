@@ -1,15 +1,26 @@
+.background {
+  background-color: rgb(27, 54, 102);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   display: flex;
   justify-content: center;
   text-align: center;
-  background-color: aliceblue;
+  width: 100%;
+  height: 70%;
+  background-color: white;
   align-items : center
 }
 
 .box {
   border: 8px solid black;
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 400px;
   margin: 5px 50px;
   background-color: white;
   border-radius: 40%;
@@ -18,15 +29,20 @@
 .score {
   width: 100px;
   height: 100px;
-  border: 5px solid black;
-  border-radius: 40%;
+  border-radius: 50%;
   padding-bottom: 10px;
-  background-color: rgb(179, 232, 246)
+}
+
+.choice {
+  display: flex;
+  justify-content: center;
+  gap: 10px /*버튼 간격*/;
 }
 
 #h {
-  background-color: rgb(179, 232, 246);
-  border-radius: 30%;
+  width: 100px;
+  background-color: rgb(27, 54, 102);
+  color: white;
 }
 
 .Win {
@@ -45,15 +61,24 @@
 }
 
 .item-img {
-  width: 300px;
-  
+  width: 80%;
+
 }
 
 .main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 800px;
+  height: 100vh;
+  max-height: 700px;
+  padding: 20px;
+  border: 5px solid black;
+  border-radius: 20px;
+  align-items: center;
+  margin: 120px auto;
   text-align: center;
-  background-color: aliceblue;
+  background-color: white;
 }
 
 .btn {
@@ -64,7 +89,6 @@
 }
 
 .btn img {
-  display: block;
   width:30px; /* 원하는 크기로 조정 */
-  height: auto;
+  height: 30px;
 }

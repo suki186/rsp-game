@@ -3,7 +3,7 @@ import React from 'react'
 const Box = (props) => {
 
   let result; // 결과
-  if (props.title == "Computer" && props.result != "Tie" && props.result != "") {
+  if (props.title == "Com" && props.result != "Tie" && props.result != "Ready") {
     result = props.result == "Win" ? "Lose" : "Win" // 컴퓨터는 결과의 반대로 출력
   }
   else {
